@@ -72,7 +72,7 @@
     "cmd-right": "send:\u0005",
     "cmd-backspace": "send:\u0015"
   },
-  "layout:herdr-t3": {
+  "layout:crest": {
     "cmd-b": "layout.toggle:sidebar",
     "cmd-shift-l": "t3-tabs.sidebar",
     "cmd-shift-b": "t3-tabs.details",

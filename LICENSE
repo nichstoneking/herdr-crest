@@ -21,16 +21,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 The MIT license above covers mods/panel-buttons, mods/review-pane, install.sh
-and the changes to layouts/herdr-t3.json and keys.json described in README.md.
+and the changes to layouts/crest.json, mods/t3-chrome and keys.json described
+in README.md.
 
 ---
 
-layouts/herdr-t3.json, layouts/herdr-t3.svg, keys.json (in part) and
-mods/t3-* come from herdr-t3 (https://github.com/JinJieBeWater/herdr-t3) by
-JinJieBeWater, under the Apache License 2.0 (licenses/herdr-t3-APACHE-2.0.txt).
-The mods/t3-* folders are unmodified copies of upstream commit
-a790cc280cfbc27e856672edb457e3ee4061cd92. layouts/herdr-t3.json and keys.json
-were modified as README.md describes ("How it differs from herdr-t3").
+layouts/crest.json and layouts/crest.svg (renamed from herdr-t3.json and
+herdr-t3.svg), keys.json (in part) and mods/t3-* come from herdr-t3
+(https://github.com/JinJieBeWater/herdr-t3) by JinJieBeWater, under the Apache
+License 2.0 (licenses/herdr-t3-APACHE-2.0.txt). The mods/t3-* folders are
+copies of upstream commit a790cc280cfbc27e856672edb457e3ee4061cd92; only
+mods/t3-chrome/main.js is changed (the layout's name, herdr-t3 to crest).
+layouts/crest.json and keys.json were modified as README.md describes
+("How it differs from herdr-t3").
+
+themes/tokyo-night.json uses the colours of Tokyo Night
+(https://github.com/folke/tokyonight.nvim), MIT, Copyright (c) Folke Lemaitre.
 
 mods/files-t3 is a copy of the Files mod that ships with Herdr
 (https://herdr.dev), with its corners and outline changed.

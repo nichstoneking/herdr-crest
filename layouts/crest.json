@@ -5,7 +5,8 @@
     "version": "0.1.10"
   },
   "type": "row",
-  "preview": "layouts/herdr-t3.svg",
+  "preview": "layouts/crest.svg",
+  "theme": "tokyo-night",
   "divider": {
     "width": 1,
     "color": "border"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Installs this Herdr setup into ~/.config/herdr-app (or $HERDR_APP_HOME):
-# the herdr-t3 layout, its mods, keys.json, and settings.json (merged over yours).
+# the crest layout, its mods, the Tokyo Night theme, keys.json, and settings.json (merged over yours).
 # Everything it replaces is copied to <home>-backup-<time> first.
 set -euo pipefail
 
@@ -22,7 +22,7 @@ save() {
   cp -R "$home/$1" "$backup/$1"
 }
 
-mkdir -p "$home/mods" "$home/layouts"
+mkdir -p "$home/mods" "$home/layouts" "$home/themes"
 
 for m in "${mods[@]}"; do
   save "mods/$m"
@@ -30,7 +30,7 @@ for m in "${mods[@]}"; do
   rsync -a --delete --exclude gpui-kit.d.ts --exclude jsconfig.json "$src/mods/$m/" "$home/mods/$m/"
 done
 
-for f in layouts/herdr-t3.json layouts/herdr-t3.svg keys.json; do
+for f in layouts/crest.json layouts/crest.svg themes/tokyo-night.json keys.json; do
   save "$f"
   cp "$src/$f" "$home/$f"
 done
@@ -45,11 +45,11 @@ else
   cp "$src/settings.json" "$home/settings.json"
 fi
 
-echo "Installed ${#mods[@]} mods, the herdr-t3 layout, keys.json and settings.json into $home"
+echo "Installed ${#mods[@]} mods, the crest layout, the tokyo-night theme, keys.json and settings.json into $home"
 [ -d "$backup" ] && echo "Replaced files are in $backup"
 
 if ! command -v herdr-app >/dev/null; then
-  echo "herdr-app isn't on PATH: open Herdr and pick the herdr-t3 layout (ctrl-shift-l)."
+  echo "herdr-app isn't on PATH: open Herdr and pick the crest layout (ctrl-shift-l)."
   exit 0
 fi
 
@@ -60,8 +60,8 @@ done
 [ "$failed" = 0 ] && echo "All mods pass herdr-app check"
 
 if herdr-app status >/dev/null 2>&1; then
-  herdr-app do layout.switch --name herdr-t3 >/dev/null && echo "Switched Herdr to the herdr-t3 layout"
+  herdr-app do layout.switch --name crest >/dev/null && echo "Switched Herdr to the crest layout"
 else
-  echo "Herdr isn't running: open it and pick the herdr-t3 layout (ctrl-shift-l)."
+  echo "Herdr isn't running: open it and pick the crest layout (ctrl-shift-l)."
 fi
 exit "$failed"

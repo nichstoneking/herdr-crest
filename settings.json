@@ -10,9 +10,5 @@
   "terminal_cell_width": 1,
   "terminal_scroll_speed": 1,
   "ui_font": "JetBrainsMono Nerd Font",
-  "minimum_contrast": 1,
-  "theme": {
-    "light": "paper",
-    "dark": "ink"
-  }
+  "minimum_contrast": 1
 }

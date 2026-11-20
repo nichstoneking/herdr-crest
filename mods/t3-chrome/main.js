@@ -61,7 +61,7 @@ export default class WorkspaceChrome extends View {
 
   alignLights(cx) {
     if (checking()) return;
-    if (shared("layout") !== "herdr-t3") return;
+    if (shared("layout") !== "crest") return;
     const root = /** @type {any} */ (layout()), w = window(), zoom = Number(settings().zoom) || 1;
     if (w?.platform !== "macos" || w.fullscreen || root?.titlebar !== "none" || !root.traffic_lights || this.lightsWriting) return;
     // Once per zoom and layout value: an update that rewrites the layout is aligned again, a failure isn't retried.
@@ -74,7 +74,7 @@ export default class WorkspaceChrome extends View {
     this.lightsWriting = true;
     cx.spawn(async () => {
       try {
-        const file = `${appHome()}/layouts/herdr-t3.json`, before = await readTextFile(file);
+        const file = `${appHome()}/layouts/crest.json`, before = await readTextFile(file);
         if (before === null) throw new Error("Couldn't read the layout file.");
         const saved = JSON.parse(before);
         if (saved.titlebar !== "none" || !saved.traffic_lights || saved.traffic_lights[1] === y) return;
