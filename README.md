@@ -30,7 +30,7 @@ Also install these:
 | Path | What |
 |---|---|
 | `layouts/herdr-t3.json` | The window: herdr-t3's layout with the changes below |
-| `mods/t3-*` | herdr-t3's mods, unchanged, from upstream commit [`a790cc2`](https://github.com/JinJieBeWater/herdr-t3/commit/a790cc280cfbc27e856672edb457e3ee4061cd92) |
+| `mods/t3-*` | herdr-t3's mods, unchanged, from upstream commit [`a790cc2`](https://github.com/JinJieBeWater/herdr-t3/commit/a790cc280cfbc27e856672edb457e3ee4061cd92), without `t3-files` (only its right panel used it) |
 | `mods/panel-buttons` | The tab bar's Files and Changes buttons |
 | `mods/review-pane` | The review pane (same as [herdr-review-pane](https://github.com/nichstoneking/herdr-review-pane)) |
 | `mods/files-t3` | Herdr's Files mod with herdr-t3's 8px corners and no outline |
@@ -42,7 +42,7 @@ Also install these:
 - **Tab bar:** herdr-t3's Actions button and window-controls block are replaced by `panel-buttons`, 62px wide with two 28px buttons:
   - **Files** shows or hides a right panel (440px; 320 to 900) with `files-t3`, the browser for the focused terminal's folder.
   - **Changes** splits the focused pane with the review pane, or closes the review pane if the tab already has one.
-- **Right panel:** herdr-t3's Files and Review panel (`t3-files`, `t3-chrome` surfaces) is removed from the layout.
+- **Right panel:** herdr-t3's Files and Review panel (`t3-files`, `t3-chrome` surfaces) is removed from the layout, and `t3-files` with it.
 - **Sidebar:** opens on Lists (Spaces + Agents) instead of Inbox. `cmd-shift-l` still switches between them.
 - **Keys** in the herdr-t3 layout:
 
